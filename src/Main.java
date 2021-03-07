@@ -6,11 +6,10 @@ class spiralMatrix {
 
     public static void main(String[] args){
 
-        int matrisBoyutu; //Matris boyunu tutacak değişken
+        int matrisBoyutu; 
         System.out.println("Salyangoz matrisi için boyut giriniz:");
-        matrisBoyutu = new Scanner(System.in).nextInt(); //Girilen matris boyunu okuyoruz
+        matrisBoyutu = new Scanner(System.in).nextInt(); 
 
-        //salyangoz matrisini tutmak için 2 boyutlu int dizisi oluşturuyoruz.
         int[][] matris = new int[matrisBoyutu][matrisBoyutu];
 
         //Burada matris içinde salyangoz çizip gerekli değerleri atamak için gereken değişkenler mevcut.
@@ -19,7 +18,7 @@ class spiralMatrix {
         //Bu değişken true olduğunda apsis ve ordinat gezginlerini arttırırız aksi halde azaltırız.
         boolean arttir = true;
 
-        //Burada boyut sayısı kadar döngü tekrar ettiğinde salyangoz tamamlanıyor.
+        
         for (int i = 0; i < matrisBoyutu; i++){
             //apsis ve ordinat gezginlerinin arttırılma veya azaltmadan önceki değerleri atıyoruz.
             matris[apsisGezgini][ordinatGezgini] = toplam;
@@ -45,11 +44,11 @@ class spiralMatrix {
             }
             arttir = !arttir; //arttir değişkeninin tersini alıyoruz ki üstteki if yapısının blokları sırasıyla işlesin.
         }
-        //Oluşturduğumuz salyangoz matrisini ekrana yazdırıyoruz.
+        
         for (int satir = 0; satir < matrisBoyutu; satir++){
             for (int sutun = 0; sutun < matrisBoyutu; sutun++)
                 System.out.print(matris[sutun][satir] + "\t"); //Burada ekrana yazılan her değerin yanına düzenli görünmesi için tab boşluğu ekleniyor.
-            System.out.println(); //Alt satıra geçiyoruz.
+            System.out.println(); 
         }
     }
 }
